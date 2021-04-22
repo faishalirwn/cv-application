@@ -1,5 +1,4 @@
 import "../styles/block.css";
-import BlockControl from "./BlockControl";
 import BlockSummary from "./BlockSummary";
 import BlockWork from "./BlockWork";
 import BlockEducation from "./BlockEducation";
@@ -24,7 +23,10 @@ function Block(props) {
   return (
     <div class="block">
       {blockComponent}
-      <BlockControl />
+      <div class="block-control">
+        <button>Up</button>
+        <button>Down</button>
+      </div>
     </div>
   );
 }
