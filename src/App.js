@@ -1,5 +1,5 @@
 import "./App.css";
-import Switcher from "./components/Switcher";
+import CVInput from "./components/CVInput";
 
 function App() {
   return (
@@ -10,7 +10,8 @@ function App() {
         <button>Print</button>
       </nav>
       <div className="App">
-        <Switcher />
+        <CVInput />
+        {/* <CVPaper /> */}
       </div>
     </>
   );
