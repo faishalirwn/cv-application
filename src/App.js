@@ -1,15 +1,16 @@
 import "./App.css";
-import CVPaper from "./components/CVPaper";
+import Switcher from "./components/Switcher";
 
 function App() {
   return (
     <>
       <nav>
-        <button>i</button>
+        <p>CV Maker</p>
+        <button>Preview</button>
         <button>Print</button>
       </nav>
       <div className="App">
-        <CVPaper />
+        <Switcher />
       </div>
     </>
   );
