@@ -4,7 +4,7 @@ class CVPaper extends Component {
   render() {
     return (
       <div>
-        <div>
+        <section>
           <img src="" alt="" />
           <div>
             <h3>John Smith</h3>
@@ -14,12 +14,12 @@ class CVPaper extends Component {
             <p>Linkedin: linkedin.com/in/asd</p>
             <p>Github: github.com/asd</p>
           </div>
-        </div>
-        <div>
+        </section>
+        <section>
           <h2>Summary</h2>
           <p>I am not you yes I am not yes I am no no yes</p>
-        </div>
-        <div>
+        </section>
+        <section>
           <h2>Work Experience</h2>
           <ul>
             <li>
@@ -45,8 +45,8 @@ class CVPaper extends Component {
               </p>
             </li>
           </ul>
-        </div>
-        <div>
+        </section>
+        <section>
           <h2>Education</h2>
           <ul>
             <li>
@@ -59,7 +59,7 @@ class CVPaper extends Component {
               <p>2013 - 2016</p>
             </li>
           </ul>
-        </div>
+        </section>
       </div>
     );
   }
