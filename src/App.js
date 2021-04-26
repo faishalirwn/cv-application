@@ -158,7 +158,6 @@ class App extends Component {
           <button onClick={this.handlePreviewSwitch}>
             {this.state.preview ? "Edit" : "Preview"}
           </button>
-          <button>Print</button>
         </nav>
         <div className="App">
           {this.state.preview ? (
