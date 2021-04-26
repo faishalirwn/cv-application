@@ -100,12 +100,14 @@ class App extends Component {
       <>
         <nav>
           <p>CV Maker</p>
-          <button onClick={this.handlePreviewSwitch}>Preview</button>
+          <button onClick={this.handlePreviewSwitch}>
+            {this.state.preview ? "Edit" : "Preview"}
+          </button>
           <button>Print</button>
         </nav>
         <div className="App">
           {this.state.preview ? (
-            <CVPaper />
+            <CVPaper cvContent={this.state.cvContent} />
           ) : (
             <CVInput
               onValueChange={this.handleValueChange}
