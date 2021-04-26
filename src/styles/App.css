@@ -2,12 +2,16 @@
   max-width: 700px;
   margin: 0 auto;
   padding: 1em;
+  padding-top: 50px;
 }
 
 header {
   box-shadow: 0 0.125em 0.313em rgba(50, 50, 93, 0.09),
     0 0.063em 0.125em rgba(0, 0, 0, 0.07);
   padding: 0.5em 0;
+  position: fixed;
+  width: 100%;
+  background-color: #fff;
 }
 
 #container {
