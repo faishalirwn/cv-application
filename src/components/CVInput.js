@@ -37,6 +37,8 @@ class CVInput extends Component {
           <p>
             <label htmlFor="name">Name: </label>
             <input
+              type="text"
+              placeholder="Saitama"
               onChange={this.handleValueChange.bind(this, "name")}
               value={cvContent.name}
             />
@@ -44,6 +46,8 @@ class CVInput extends Component {
           <p>
             <label htmlFor="address">Address: </label>
             <input
+              type="text"
+              placeholder="San Fransisco, CA"
               onChange={this.handleValueChange.bind(this, "address")}
               value={cvContent.address}
             />
@@ -51,6 +55,8 @@ class CVInput extends Component {
           <p>
             <label htmlFor="phone">Phone Number: </label>
             <input
+              type="text"
+              placeholder="+14162241527"
               onChange={this.handleValueChange.bind(this, "phone")}
               value={cvContent.phone}
             />
@@ -58,6 +64,8 @@ class CVInput extends Component {
           <p>
             <label htmlFor="email">Email: </label>
             <input
+              type="text"
+              placeholder="saitama@opm.com"
               onChange={this.handleValueChange.bind(this, "email")}
               value={cvContent.email}
             />
@@ -65,6 +73,8 @@ class CVInput extends Component {
           <p>
             <label htmlFor="linkedin">Linkedin: </label>
             <input
+              type="text"
+              placeholder="linkedin.com/in/saitama"
               onChange={this.handleValueChange.bind(this, "linkedin")}
               value={cvContent.linkedin}
             />
@@ -72,6 +82,8 @@ class CVInput extends Component {
           <p>
             <label htmlFor="github">Github: </label>
             <input
+              type="text"
+              placeholder="github.com/saitama"
               onChange={this.handleValueChange.bind(this, "github")}
               value={cvContent.github}
             />
@@ -81,6 +93,7 @@ class CVInput extends Component {
         <section>
           <h2>Summary</h2>
           <textarea
+            placeholder="I have dived in web development especially front-end for almost 2 years since 2017. I entered the programming world in 2018. I'm interested in learning computer science in order to become a solid software engineer. In that regard, I’m eager to build something that could have good impacts on the lives of others."
             onChange={this.handleValueChange.bind(this, "summary")}
             value={cvContent.summary}
             cols="30"
@@ -103,6 +116,7 @@ class CVInput extends Component {
                       i
                     )}
                     type="text"
+                    placeholder="Software Engineer"
                     autoComplete="off"
                     id={`role_${i}`}
                     value={cvContent.work[i].role}
@@ -118,6 +132,7 @@ class CVInput extends Component {
                       i
                     )}
                     type="text"
+                    placeholder="Azamon"
                     autoComplete="off"
                     id={`company_${i}`}
                     value={cvContent.work[i].company}
@@ -133,6 +148,7 @@ class CVInput extends Component {
                       i
                     )}
                     type="text"
+                    placeholder="August 2019"
                     autoComplete="off"
                     id={`work_from_${i}`}
                     value={cvContent.work[i].from}
@@ -148,6 +164,7 @@ class CVInput extends Component {
                       i
                     )}
                     type="text"
+                    placeholder="July 2029"
                     autoComplete="off"
                     id={`work_to_${i}`}
                     value={cvContent.work[i].to}
@@ -163,6 +180,7 @@ class CVInput extends Component {
                       i
                     )}
                     type="text"
+                    placeholder="Part of Technology departement. For backend tasks, we are using Node and GraphQL. As for frontend tasks, we are using React."
                     autoComplete="off"
                     id={`desc_${i}`}
                     value={cvContent.work[i].desc}
@@ -208,6 +226,7 @@ class CVInput extends Component {
                       i
                     )}
                     type="text"
+                    placeholder="Computer Science"
                     autoComplete="off"
                     id={`field_${i}`}
                     value={cvContent.education[i].field}
@@ -225,6 +244,7 @@ class CVInput extends Component {
                       i
                     )}
                     type="text"
+                    placeholder="Harvard University"
                     autoComplete="off"
                     id={`school_${i}`}
                     value={cvContent.education[i].school}
@@ -240,6 +260,7 @@ class CVInput extends Component {
                       i
                     )}
                     type="text"
+                    placeholder="US"
                     autoComplete="off"
                     id={`country_${i}`}
                     value={cvContent.education[i].country}
@@ -256,6 +277,7 @@ class CVInput extends Component {
                         i
                       )}
                       type="text"
+                      placeholder="4th"
                       autoComplete="off"
                       id={`year_${i}`}
                       value={cvContent.education[i].year}
@@ -274,6 +296,7 @@ class CVInput extends Component {
                       i
                     )}
                     type="text"
+                    placeholder="4.0"
                     autoComplete="off"
                     id={`gpa_${i}`}
                     value={cvContent.education[i].gpa}
@@ -289,6 +312,7 @@ class CVInput extends Component {
                       i
                     )}
                     type="text"
+                    placeholder="2017"
                     autoComplete="off"
                     id={`education_from_${i}`}
                     value={cvContent.education[i].from}
@@ -304,6 +328,7 @@ class CVInput extends Component {
                       i
                     )}
                     type="text"
+                    placeholder="2020"
                     autoComplete="off"
                     id={`education_to_${i}`}
                     value={cvContent.education[i].to}

@@ -45,7 +45,8 @@ class CVPaper extends Component {
                     {form.field}, {form.school}, {form.country}
                   </p>
                   <p>
-                    {form.year ? `${form.year}. ` : ""} {form.from} - {form.to}{" "}
+                    {form.year ? `${form.year} year. ` : ""} {form.from} -{" "}
+                    {form.to}{" "}
                   </p>
                   <p>
                     {form.enroll ? "Current" : ""} GPA: {form.gpa}
