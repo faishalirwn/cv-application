@@ -7,6 +7,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      preview: false,
       cvContent: {
         name: "",
         address: "",
@@ -43,6 +44,7 @@ class App extends Component {
     this.handleArrayValueChange = this.handleArrayValueChange.bind(this);
     this.handleFormAddition = this.handleFormAddition.bind(this);
     this.handleFormDeletion = this.handleFormDeletion.bind(this);
+    this.handlePreviewSwitch = this.handlePreviewSwitch.bind(this);
   }
 
   handleValueChange(key, value) {
@@ -89,23 +91,30 @@ class App extends Component {
     });
   }
 
+  handlePreviewSwitch() {
+    this.setState({ preview: !this.state.preview });
+  }
+
   render() {
     return (
       <>
         <nav>
           <p>CV Maker</p>
-          <button>Preview</button>
+          <button onClick={this.handlePreviewSwitch}>Preview</button>
           <button>Print</button>
         </nav>
         <div className="App">
-          <CVInput
-            onValueChange={this.handleValueChange}
-            onArrayValueChange={this.handleArrayValueChange}
-            onFormAddition={this.handleFormAddition}
-            onFormDeletion={this.handleFormDeletion}
-            cvContent={this.state.cvContent}
-          />
-          {/* <CVPaper /> */}
+          {this.state.preview ? (
+            <CVPaper />
+          ) : (
+            <CVInput
+              onValueChange={this.handleValueChange}
+              onArrayValueChange={this.handleArrayValueChange}
+              onFormAddition={this.handleFormAddition}
+              onFormDeletion={this.handleFormDeletion}
+              cvContent={this.state.cvContent}
+            />
+          )}
         </div>
       </>
     );
