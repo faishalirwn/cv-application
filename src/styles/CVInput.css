@@ -1,0 +1,22 @@
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.checkbox-label {
+  display: inline;
+}
+
+p {
+  margin: 5px 0;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 5px;
+}
+
+textarea {
+  resize: none;
+  width: 100%;
+}

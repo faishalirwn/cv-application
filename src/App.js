@@ -1,5 +1,5 @@
 import { Component } from "react";
-import "./App.css";
+import "./styles//App.css";
 import CVInput from "./components/CVInput";
 import CVPaper from "./components/CVPaper";
 
@@ -152,13 +152,17 @@ class App extends Component {
   render() {
     return (
       <>
-        <nav>
-          <p>CV Maker</p>
-          <button onClick={this.handleExample}>Load Example</button>
-          <button onClick={this.handlePreviewSwitch}>
-            {this.state.preview ? "Edit" : "Preview"}
-          </button>
-        </nav>
+        <header>
+          <div id="container">
+            <p>CV Maker</p>
+            <nav>
+              <button onClick={this.handleExample}>👁👄👁Load Example</button>
+              <button onClick={this.handlePreviewSwitch}>
+                {this.state.preview ? "✏️Edit" : "🚀Preview"}
+              </button>
+            </nav>
+          </div>
+        </header>
         <div className="App">
           {this.state.preview ? (
             <CVPaper cvContent={this.state.cvContent} />

@@ -1,4 +1,5 @@
 import { Component } from "react";
+import "../styles/CVInput.css";
 
 class CVInput extends Component {
   constructor(props) {
@@ -172,19 +173,19 @@ class CVInput extends Component {
                 </p>
                 <p>
                   <label htmlFor={`desc_${i}`}>Description: </label>
-                  <input
+                  <textarea
                     onChange={this.handleArrayValueChange.bind(
                       this,
                       "work",
                       "desc",
                       i
                     )}
-                    type="text"
-                    placeholder="Part of Technology departement. For backend tasks, we are using Node and GraphQL. As for frontend tasks, we are using React."
-                    autoComplete="off"
                     id={`desc_${i}`}
                     value={cvContent.work[i].desc}
-                  />
+                    placeholder="Part of Technology departement. For backend tasks, we are using Node and GraphQL. As for frontend tasks, we are using React."
+                    cols="30"
+                    rows="10"
+                  ></textarea>
                 </p>
                 <button onClick={this.handleFormDeletion.bind(this, "work", i)}>
                   Delete
@@ -214,7 +215,9 @@ class CVInput extends Component {
                     id={`enroll_${i}`}
                     value={cvContent.education[i].enroll}
                   />
-                  <label htmlFor={`enroll_${i}`}>Currently Enrolling</label>
+                  <label className="checkbox-label" htmlFor={`enroll_${i}`}>
+                    Currently Enrolling
+                  </label>
                 </p>
                 <p>
                   <label htmlFor={`field_${i}`}>Field/Degree: </label>

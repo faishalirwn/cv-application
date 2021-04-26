@@ -6,14 +6,13 @@ class CVPaper extends Component {
     return (
       <div>
         <section>
-          <img src="" alt="" />
           <div>
             <h3>{cvContent.name}</h3>
             <p>{cvContent.address}</p>
-            <p>Mobile: {cvContent.phone}</p>
+            <p>Phone: {cvContent.phone}</p>
             <p>Email: {cvContent.email}</p>
             <p>Linkedin: {cvContent.linkedin}</p>
-            <p>Github: {cvContent.github}</p>
+            {cvContent.github !== "" && <p>Github: {cvContent.github}</p>}
           </div>
         </section>
         <section>
@@ -48,9 +47,11 @@ class CVPaper extends Component {
                     {form.year ? `${form.year} year. ` : ""} {form.from} -{" "}
                     {form.to}{" "}
                   </p>
-                  <p>
-                    {form.enroll ? "Current" : ""} GPA: {form.gpa}
-                  </p>
+                  {form.gpa !== "" && (
+                    <p>
+                      {form.enroll ? "Current" : ""} GPA: {form.gpa}
+                    </p>
+                  )}
                 </li>
               );
             })}
